@@ -1,5 +1,11 @@
-// Placeholder config file
-export const siteConfig = {
-  name: "Space Apps Challenge",
-  description: "NASA Space Apps Challenge project site."
-};
+// Re-export from resources for backwards compatibility
+export {
+  person,
+  social,
+  newsletter,
+  home,
+  about,
+  blog,
+  work,
+  gallery,
+} from "../resources";

@@ -1,4 +1,105 @@
+const person = {
+  name: 'Zain Khan',
+  role: 'Local Lead, NASA Space Apps Challenge Houston',
+  email: 'zainkhan1994.zk@gmail.com',
+  avatar: '/organizer-zainkhan.jpg',
+  location: 'Houston, TX',
+  description: 'Local Lead for NASA Space Apps Challenge Houston'
+};
+
+const social = [
+  { 
+    name: 'LinkedIn', 
+    icon: 'linkedin', 
+    link: 'https://linkedin.com/in/zainkhan1994' 
+  },
+  { 
+    name: 'X', 
+    icon: 'twitter', 
+    link: 'https://x.com/zainkhan1994' 
+  },
+  { 
+    name: 'Email', 
+    icon: 'mail', 
+    link: 'mailto:zainkhan1994.zk@gmail.com' 
+  }
+];
+
+const newsletter = {
+  display: false,
+  title: 'Stay updated',
+  description: 'Get notified about updates and events.'
+};
+
+const home = {
+  label: 'Home',
+  title: 'NASA Space Apps Houston',
+  description: 'NASA Space Apps Challenge Houston 2025',
+  headline: 'NASA Space Apps Houston 2025',
+  subline: 'Learn, Launch, Lead on October 4–5. Build solutions with NASA and partner agency data.',
+  path: '/',
+  image: '/spaceapps-hero.png',
+  featured: {
+    display: true,
+    title: 'Featured Event',
+    href: 'https://www.spaceappschallenge.org/2025/',
+  },
+  mailchimp: {
+    action: '#'
+  },
+  schema: {
+    author: 'Zain Khan',
+    logo: '/spaceapps-logo.png',
+    image: '/spaceapps-hero.png',
+    sameAs: [
+      'https://linkedin.com/in/zainkhan1994',
+      'https://x.com/zainkhan1994'
+    ]
+  }
+};
+
+const blog = {
+  label: 'Blog',
+  title: 'Blog',
+  description: 'Updates and insights',
+  path: '/blog'
+};
+
+const work = {
+  label: 'Work',
+  title: 'Work',
+  description: 'Projects and case studies',
+  path: '/work'
+};
+
+const gallery = {
+  label: 'Gallery',
+  title: 'Gallery', 
+  description: 'Photo gallery',
+  path: '/gallery',
+  images: [
+    {
+      src: '/spaceapps-hero.png',
+      alt: 'NASA Space Apps Houston',
+      orientation: 'horizontal'
+    },
+    {
+      src: '/spaceapps-logo.png',
+      alt: 'Space Apps Logo',
+      orientation: 'vertical'
+    }
+  ]
+};
+
 const about = {
+  title: 'About',
+  label: 'About',
+  description: 'About NASA Space Apps Houston and Local Lead Zain Khan',
+  path: '/about',
+  avatar: {
+    display: true,
+    src: '/organizer-zainkhan.jpg'
+  },
   headerStrip: {
     city: "Houston, TX",
     timeZone: "America/Chicago",
@@ -158,5 +259,12 @@ const about = {
 };
 
 module.exports = {
+  person,
+  social,
+  newsletter,
+  home,
   about,
+  blog,
+  work,
+  gallery,
 };
