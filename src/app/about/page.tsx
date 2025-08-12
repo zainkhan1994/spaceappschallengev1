@@ -1,4 +1,3 @@
-```typescript name=src/app/about/page.tsx
 import {
   Avatar,
   Button,
@@ -288,7 +287,7 @@ export default function About() {
                     </Text>
                     <Column as="ul" gap="16">
                       {experience.achievements.map((achievement: React.ReactNode, i: number) => (
-                        <Text as="li" variant="body-default-m" key={`${experience.company}-${i}`}>
+                        <Text as="li" variant="body-default-m" key={`${experience.company}-${i}`}> 
                           {achievement}
                         </Text>
                       ))}
@@ -395,4 +394,3 @@ export default function About() {
     </Column>
   );
 }
-```
