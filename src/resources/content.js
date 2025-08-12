@@ -1,268 +1,162 @@
-import { Logo } from "@once-ui-system/core";
-
-const person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  get name() {
-    return `${this.firstName} ${this.lastName}`;
-  },
-  role: "Design Engineer",
-  avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
-};
-
-const newsletter = {
-  display: true,
-  title: <>Subscribe to {person.firstName}'s Newsletter</>,
-  description: (
-    <>
-      I occasionally write about design, technology, and share thoughts on the intersection of
-      creativity and engineering.
-    </>
-  ),
-};
-
-const social = [
-  // Links are automatically displayed.
-  // Import new icons in /once-ui/icons.ts
-  {
-    name: "GitHub",
-    icon: "github",
-    link: "https://github.com/once-ui-system/nextjs-starter",
-  },
-  {
-    name: "LinkedIn",
-    icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
-  },
-  {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
-  },
-  {
-    name: "Email",
-    icon: "email",
-    link: `mailto:${person.email}`,
-  },
-];
-
-const home = {
-  path: "/",
-  image: "/images/og/home.jpg",
-  label: "Home",
-  title: `${person.name}'s Portfolio`,
-  description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
-  featured: {
-    display: true,
-    title: <>Recent project: <strong className="ml-4">Once UI</strong></>,
-    href: "/work/building-once-ui-a-customizable-design-system",
-  },
-  subline: (
-    <>
-      I'm Selene, a design engineer at <Logo icon="/trademarks/wordmark-dark.svg" style={{ display: "inline-flex", top: "0.25em", marginLeft: "-0.25em" }}/>, where I craft intuitive
-      <br /> user experiences. After hours, I build my own projects.
-    </>
-  ),
-};
-
 const about = {
-  path: "/about",
-  label: "About",
-  title: `About – ${person.name}`,
-  description: `Meet ${person.name}, ${person.role} from ${person.location}`,
-  tableOfContent: {
-    display: true,
-    subItems: false,
+  headerStrip: {
+    city: "Houston, TX",
+    timeZone: "America/Chicago",
+    localTimeToggle: true,
+    registerLabel: "Register",
+    registerHref: "https://www.spaceappschallenge.org/2025/",
   },
-  avatar: {
-    display: true,
+
+  hero: {
+    title: "NASA Space Apps Houston 2025",
+    subtitle: "Learn, Launch, Lead on October 4–5. Build solutions with NASA and partner agency data.",
+    primaryCTA: {
+      label: "Register",
+      href: "https://www.spaceappschallenge.org/2025/",
+      analyticsId: "about-hero-register",
+      external: true,
+    },
+    secondaryCTA: {
+      label: "Join the Houston Discord",
+      href: "#", // Replace with your Discord invite link
+      analyticsId: "about-hero-discord",
+      external: true,
+    },
+    backgroundImage: "/spaceapps-hero.png",
+    logo: "/spaceapps-logo.png",
+    alt: "NASA Space Apps Houston 2025",
   },
-  calendar: {
-    display: true,
-    link: "https://cal.com",
+
+  whatIs: {
+    heading: "What is NASA Space Apps",
+    bodyRich:
+      "NASA Space Apps is the world’s largest annual global hackathon. Anyone can join. Teams use free and open NASA data to solve real problems on Earth and in space across two days.",
+    externalLink: {
+      label: "About NASA Space Apps",
+      href: "https://www.spaceappschallenge.org/about/",
+      external: true,
+    },
   },
-  intro: {
-    display: true,
-    title: "Introduction",
-    description: (
-      <>
-        Selene is a Jakarta-based design engineer with a passion for transforming complex challenges
-        into simple, elegant design solutions. Her work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
-      </>
-    ),
+
+  houstonLocal: {
+    heading: "Houston local event",
+    bullets: [
+      "In-person in Houston",
+      "Two-day build and submit",
+      "Mentors and volunteers on site",
+      "Sponsors and community partners welcome",
+    ],
+    mapEmbed:
+      "<iframe src='https://www.google.com/maps?q=Houston,+TX&output=embed' width='100%' height='200' style='border:0' allowFullScreen='' loading='lazy'></iframe>",
+    CTA: {
+      label: "Register for Houston",
+      href: "https://www.spaceappschallenge.org/2025/", // Replace with Houston deep link if available
+      analyticsId: "about-houston-register",
+      external: true,
+    },
   },
-  work: {
-    display: true, // set to false to hide this section
-    title: "Work Experience",
-    experiences: [
+
+  organizer: {
+    name: "Zain Khan",
+    role: "Local Lead, NASA Space Apps Houston 2025",
+    photo: "/organizer-zainkhan.jpg", // Your headshot
+    bio:
+      "Community builder focused on STEM access, design engineering practices, and AI literacy. Leads outreach, sponsors, and day-of operations with a volunteer team.",
+    social: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
-        achievements: [
-          <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
-          </>,
-          <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
-          </>,
-        ],
-        images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
-        ],
+        label: "LinkedIn",
+        href: "#", // Replace with LinkedIn URL
+        icon: "linkedin",
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
-        achievements: [
-          <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
-          </>,
-          <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
-          </>,
-        ],
-        images: [],
+        label: "X (Twitter)",
+        href: "#", // Replace with X/Twitter URL
+        icon: "twitter",
       },
     ],
   },
-  studies: {
-    display: true, // set to false to hide this section
-    title: "Studies",
-    institutions: [
+
+  howTo: {
+    heading: "How to participate",
+    steps: [
+      "Create your account on SpaceAppsChallenge.org",
+      "Select the Houston local event when you register",
+      "Form or join a team",
+      "Pick a challenge",
+      "Submit by the deadline on October 5",
+    ],
+  },
+
+  sponsors: {
+    heading: "Sponsors and partners",
+    pitch:
+      "Support Houston talent with mentorship, prizes, food, or venue resources. Reach students, engineers, designers, and founders.",
+    benefits: [
+      "Brand visibility to students and professionals",
+      "Local and global impact",
+      "Network with NASA and partner agencies",
+      "Contribute to STEM education and innovation",
+    ],
+    sponsorCTA: {
+      label: "Sponsor Houston",
+      href: "#", // Add sponsor form or email here
+      analyticsId: "about-sponsor",
+      external: true,
+    },
+    logos: [
+      "/spaceapps-logo.png",
+      "/spaceapps-prior.png",
+    ],
+  },
+
+  resources: {
+    heading: "Resources",
+    links: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        label: "Participant FAQ",
+        href: "https://www.spaceappschallenge.org/faq/",
+        external: true,
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        label: "Brand Guidelines",
+        href: "https://www.spaceappschallenge.org/brand/",
+        external: true,
+      },
+      {
+        label: "Awards",
+        href: "https://www.spaceappschallenge.org/awards/",
+        external: true,
+      },
+      {
+        label: "Global Blog",
+        href: "https://www.spaceappschallenge.org/blog/",
+        external: true,
       },
     ],
   },
-  technical: {
-    display: true, // set to false to hide this section
-    title: "Technical skills",
-    skills: [
-      {
-        title: "Figma",
-        description: <>Able to prototype in Figma with Once UI with unnatural speed.</>,
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-02.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-          {
-            src: "/images/projects/project-01/cover-03.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
-      },
-      {
-        title: "Next.js",
-        description: <>Building next gen apps with Next.js + Once UI + Supabase.</>,
-        // optional: leave the array empty if you don't want to display images
-        images: [
-          {
-            src: "/images/projects/project-01/cover-04.jpg",
-            alt: "Project image",
-            width: 16,
-            height: 9,
-          },
-        ],
-      },
-    ],
+
+  galleryStrip: {
+    galleryRef: "/gallery",
+    showRecent: true,
+  },
+
+  blogStrip: {
+    postsRef: "/blog",
+    tagFilter: null,
+  },
+
+  footer: {
+    contactCTA: "Contact",
+    email: "houston-spaceapps@placeholder.com", // Replace with real email
+    codeOfConduct: {
+      label: "Code of Conduct",
+      href: "https://www.spaceappschallenge.org/code-of-conduct/",
+      external: true,
+    },
+    brandNotes: "NASA Space Apps Houston is a locally organized event and not directly affiliated with NASA.",
   },
 };
 
-const blog = {
-  path: "/blog",
-  label: "Blog",
-  title: "Writing about design and tech...",
-  description: `Read what ${person.name} has been up to recently`,
-  // Create new blog posts by adding a new .mdx file to app/blog/posts
-  // All posts will be listed on the /blog route
+module.exports = {
+  about,
 };
-
-const work = {
-  path: "/work",
-  label: "Work",
-  title: `Projects – ${person.name}`,
-  description: `Design and dev projects by ${person.name}`,
-  // Create new project pages by adding a new .mdx file to app/blog/posts
-  // All projects will be listed on the /home and /work routes
-};
-
-const gallery = {
-  path: "/gallery",
-  label: "Gallery",
-  title: `Photo gallery – ${person.name}`,
-  description: `A photo collection by ${person.name}`,
-  // Images by https://lorant.one
-  // These are placeholder images, replace with your own
-  images: [
-    {
-      src: "/images/gallery/horizontal-1.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/horizontal-2.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/horizontal-3.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/horizontal-4.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/vertical-1.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/vertical-2.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/vertical-3.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/vertical-4.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-  ],
-};
-
-export { person, social, newsletter, home, about, blog, work, gallery };
